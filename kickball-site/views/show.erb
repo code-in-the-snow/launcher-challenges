@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kickball Page</title>
+    <link rel="stylesheet" href="/home.css">
+  </head>
+
+  <body>
+    <h1>
+      Go team <%= team_name %>!
+    </h1>
+
+    <ul>
+      <% all_data[team_name].each do |pos, player| %>
+        <li><%= "#{player.upcase}: #{pos}" %></li>
+      <% end %>
+    </ul>
+
+    <a href="/teams">All teams</a>
+  </body>
+</html>

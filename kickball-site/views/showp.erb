@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kickball Page</title>
+    <link rel="stylesheet" href="/home.css">
+  </head>
+
+  <body>
+    <h1>
+       <%= position_name %>s All!
+    </h1>
+
+    <ul>
+      <% all_data.each do |team, roster| %>
+        <li><%= "#{roster[position_name]}: #{team}" %></li>
+      <% end %>
+    </ul>
+
+    <a href="/positions">All positions</a>
+  </body>
+</html>
